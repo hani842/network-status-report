@@ -1,0 +1,78 @@
+Network Status Report
+Report Data:‫جۆمعه ۱۶ اوْکتوْبر ۲۶، ساعات ۰۳:۲۱:۳۹ (+0330)‬
+
+===Network Interface===
+lo               UNKNOWN        00:00:00:00:00:00 <LOOPBACK,UP,LOWER_UP> 
+enp0s3           UP             08:00:27:ab:47:f0 <BROADCAST,MULTICAST,UP,LOWER_UP> 
+
+===Ip Addresses===
+lo               UNKNOWN        127.0.0.1/8 ::1/128 
+enp0s3           UP             10.0.2.15/24 fd17:625c:f037:2:cbe:6fd1:14ac:5ef9/64 fd17:625c:f037:2:f55a:81c9:8b57:4447/64 fe80::c827:c068:58b5:54b5/64 
+
+===Ipv4 Routes===
+default via 10.0.2.2 dev enp0s3 proto dhcp metric 100 
+10.0.2.0/24 dev enp0s3 proto kernel scope link src 10.0.2.15 metric 100 
+169.254.0.0/16 dev enp0s3 scope link metric 1000 
+
+=== Ipv6 Routes===
+::1 dev lo proto kernel metric 256 pref medium
+fd17:625c:f037:2::/64 dev enp0s3 proto ra metric 100 pref medium
+fe80::/64 dev enp0s3 proto kernel metric 1024 pref medium
+default via fe80::2 dev enp0s3 proto ra metric 20100 pref medium
+
+=== Gateway Connectivity Test===
+PING 10.0.2.2 (10.0.2.2) 56(84) bytes of data.
+64 bytes from 10.0.2.2: icmp_seq=1 ttl=64 time=0.559 ms
+64 bytes from 10.0.2.2: icmp_seq=2 ttl=64 time=1.02 ms
+
+--- 10.0.2.2 ping statistics ---
+2 packets transmitted, 2 received, 0% packet loss, time 1043ms
+rtt min/avg/max/mdev = 0.559/0.791/1.023/0.232 ms
+
+===Internet Connectivity Test===
+PING 1.1.1.1 (1.1.1.1) 56(84) bytes of data.
+64 bytes from 1.1.1.1: icmp_seq=1 ttl=64 time=150 ms
+64 bytes from 1.1.1.1: icmp_seq=2 ttl=64 time=184 ms
+
+--- 1.1.1.1 ping statistics ---
+2 packets transmitted, 2 received, 0% packet loss, time 1002ms
+rtt min/avg/max/mdev = 149.876/166.759/183.642/16.883 ms
+
+===DNS Resolution Test===
+172.66.147.243  STREAM example.com
+172.66.147.243  DGRAM  
+172.66.147.243  RAW    
+104.20.23.154   STREAM 
+104.20.23.154   DGRAM  
+104.20.23.154   RAW    
+
+===listening TCP Port===
+State  Recv-Q Send-Q Local Address:Port Peer Address:PortProcess
+LISTEN 0      4096   127.0.0.53%lo:53        0.0.0.0:*          
+LISTEN 0      128        127.0.0.1:631       0.0.0.0:*          
+LISTEN 0      128            [::1]:631          [::]:*          
+
+===UDP Sockets===
+State  Recv-Q Send-Q Local Address:Port  Peer Address:PortProcess
+UNCONN 0      0            0.0.0.0:5353       0.0.0.0:*          
+UNCONN 0      0      127.0.0.53%lo:53         0.0.0.0:*          
+UNCONN 0      0            0.0.0.0:51392      0.0.0.0:*          
+UNCONN 0      0               [::]:52288         [::]:*          
+UNCONN 0      0               [::]:5353          [::]:*          
+
+===HTTPS Connectivity Test===
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+HTTP/2 200 
+date: Thu, 15 Oct 2026 23:51:44 GMT
+content-type: text/html; charset=utf-8
+server: cloudflare
+last-modified: Tue, 13 Oct 2026 20:08:28 GMT
+allow: GET, HEAD
+accept-ranges: bytes
+age: 3916
+cf-cache-status: HIT
+cf-ray: a4b2bbc6aaed1313-GYD
+alt-svc: h3=":443"; ma=86400
+

@@ -1,0 +1,42 @@
+Network Status Report
+Report Data:‫شنبه ۱۷ اوْکتوْبر ۲۶، ساعات ۰۲:۴۰:۳۹ (+0330)‬
+
+===Network Interface===
+lo               UNKNOWN        00:00:00:00:00:00 <LOOPBACK,UP,LOWER_UP> 
+enp0s3           DOWN           08:00:27:ab:47:f0 <NO-CARRIER,BROADCAST,MULTICAST,UP> 
+
+===Ip Addresses===
+lo               UNKNOWN        127.0.0.1/8 ::1/128 
+enp0s3           DOWN           
+
+===Ipv4 Routes===
+
+=== Ipv6 Routes===
+::1 dev lo proto kernel metric 256 pref medium
+
+=== Gateway Connectivity Test===
+ping: connect: Network is unreachable
+
+===Internet Connectivity Test===
+ping: connect: Network is unreachable
+
+===DNS Resolution Test===
+
+===listening TCP Port===
+State  Recv-Q Send-Q Local Address:Port Peer Address:PortProcess
+LISTEN 0      128        127.0.0.1:631       0.0.0.0:*          
+LISTEN 0      4096   127.0.0.53%lo:53        0.0.0.0:*          
+LISTEN 0      128            [::1]:631          [::]:*          
+
+===UDP Sockets===
+State  Recv-Q Send-Q Local Address:Port  Peer Address:PortProcess
+UNCONN 0      0      127.0.0.53%lo:53         0.0.0.0:*          
+UNCONN 0      0            0.0.0.0:47662      0.0.0.0:*          
+UNCONN 0      0            0.0.0.0:5353       0.0.0.0:*          
+UNCONN 0      0               [::]:54019         [::]:*          
+UNCONN 0      0               [::]:5353          [::]:*          
+
+===HTTPS Connectivity Test===
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0curl: (6) Could not resolve host: example.com

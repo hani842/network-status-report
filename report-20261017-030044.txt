@@ -1,0 +1,61 @@
+Network Status Report
+Report Data:‫شنبه ۱۷ اوْکتوْبر ۲۶، ساعات ۰۳:۰۰:۴۴ (+0330)‬
+
+===Network Interface===
+lo               UNKNOWN        00:00:00:00:00:00 <LOOPBACK,UP,LOWER_UP> 
+enp0s3           UP             08:00:27:ab:47:f0 <BROADCAST,MULTICAST,UP,LOWER_UP> 
+
+===Ip Addresses===
+lo               UNKNOWN        127.0.0.1/8 ::1/128 
+enp0s3           UP             10.0.2.15/24 fd17:625c:f037:2:c800:3bdf:8eaf:c22c/64 fd17:625c:f037:2:f55a:81c9:8b57:4447/64 fe80::c827:c068:58b5:54b5/64 
+
+===Ipv4 Routes===
+default via 10.0.2.2 dev enp0s3 proto dhcp metric 20100 
+10.0.2.0/24 dev enp0s3 proto kernel scope link src 10.0.2.15 metric 100 
+169.254.0.0/16 dev enp0s3 scope link metric 1000 
+
+=== Ipv6 Routes===
+::1 dev lo proto kernel metric 256 pref medium
+fd17:625c:f037:2::/64 dev enp0s3 proto ra metric 100 pref medium
+fe80::/64 dev enp0s3 proto kernel metric 1024 pref medium
+default via fe80::2 dev enp0s3 proto ra metric 20100 pref medium
+
+=== Gateway Connectivity Test===
+PING 10.0.2.2 (10.0.2.2) 56(84) bytes of data.
+64 bytes from 10.0.2.2: icmp_seq=1 ttl=64 time=0.396 ms
+64 bytes from 10.0.2.2: icmp_seq=2 ttl=64 time=0.700 ms
+
+--- 10.0.2.2 ping statistics ---
+2 packets transmitted, 2 received, 0% packet loss, time 1058ms
+rtt min/avg/max/mdev = 0.396/0.548/0.700/0.152 ms
+
+===Internet Connectivity Test===
+PING 1.1.1.1 (1.1.1.1) 56(84) bytes of data.
+64 bytes from 1.1.1.1: icmp_seq=1 ttl=64 time=184 ms
+64 bytes from 1.1.1.1: icmp_seq=2 ttl=64 time=189 ms
+
+--- 1.1.1.1 ping statistics ---
+2 packets transmitted, 2 received, 0% packet loss, time 1050ms
+rtt min/avg/max/mdev = 183.785/186.409/189.034/2.624 ms
+
+===DNS Resolution Test===
+
+===listening TCP Port===
+State  Recv-Q Send-Q Local Address:Port Peer Address:PortProcess
+LISTEN 0      128        127.0.0.1:631       0.0.0.0:*          
+LISTEN 0      4096   127.0.0.53%lo:53        0.0.0.0:*          
+LISTEN 0      128            [::1]:631          [::]:*          
+
+===UDP Sockets===
+State  Recv-Q Send-Q Local Address:Port  Peer Address:PortProcess
+UNCONN 0      0      127.0.0.53%lo:53         0.0.0.0:*          
+UNCONN 0      0            0.0.0.0:47662      0.0.0.0:*          
+UNCONN 0      0            0.0.0.0:5353       0.0.0.0:*          
+UNCONN 0      0               [::]:54019         [::]:*          
+UNCONN 0      0               [::]:5353          [::]:*          
+
+===HTTPS Connectivity Test===
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:02 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:15 --:--:--     0
+curl: (28) Resolving timed out after 3026 milliseconds
